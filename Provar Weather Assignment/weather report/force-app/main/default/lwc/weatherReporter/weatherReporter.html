@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Latest Weather Report" icon-name="custom:custom63">
+        <div class="slds-m-around_medium">
+            <template if:true={weather}>
+                <template for:each={weather} for:item="w">
+                    <p key={w.Id}><b>Temperature:</b> {w.Temperature__c}°C</p>
+                    <p key={w.Id}><b>Temperature Range:</b> {w.Temperature_Min__c}°C (Min) - {w.Temperature_Max__c}°C (Max)</p>
+                    <p key={w.Id}><b>Humidity:</b> {w.Humidity__c}%</p>
+                    <p key={w.Id}><b>Pressure:</b> {w.Pressure__c}Pa</p>
+                    <p key={w.Id}><b>Description:</b> {w.Weather_Description__c}</p>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>
