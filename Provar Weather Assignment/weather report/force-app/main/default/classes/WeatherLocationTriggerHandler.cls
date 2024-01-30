@@ -4,6 +4,5 @@ public class WeatherLocationTriggerHandler
     {
         System.debug('LocationTriggerHandler - afterInsert');
         REST_OpenWeatherMap.invokeGetWeather(locations);
-        system.debug('test');
     }
 }
